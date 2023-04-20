@@ -72,7 +72,8 @@ elseif(${CMAKE_SYSTEM_PROCESSOR} STREQUAL "aarch64")
 			COMMAND sh -c "echo ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}/ArenaSDK_Linux_ARM64/GenICam/library/lib/Linux64_ARM >> ArenaSDK.conf"
 			WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build)
 		execute_process(
-			COMMAND sh -c "echo ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}/ArenaSDK_Linux_ARM64/ffmpeg >> ArenaSDK.conf"
+			# COMMAND sh -c "echo ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}/ArenaSDK_Linux_ARM64/ffmpeg >> ArenaSDK.conf"
+			COMMAND sh -c "echo /usr/lib/x86_64-linux-gnu >> ArenaSDK.conf"
 			WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/build)
 	endif()
 
